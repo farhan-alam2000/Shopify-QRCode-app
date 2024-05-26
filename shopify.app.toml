@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "b5dec7b851578b77cd1c1505207de776"
+name = "qr-code-app"
+handle = "qr-code-app-266"
+application_url = "https://cp-devel-density-audio.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "farhan-test-url.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://cp-devel-density-audio.trycloudflare.com/auth/callback",
+  "https://cp-devel-density-audio.trycloudflare.com/auth/shopify/callback",
+  "https://cp-devel-density-audio.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
